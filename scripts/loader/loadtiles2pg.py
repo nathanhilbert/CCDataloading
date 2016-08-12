@@ -36,6 +36,8 @@ if __name__ == '__main__':
         if not f.endswith('tif'):
             continue
 
+        
+
 
 
 

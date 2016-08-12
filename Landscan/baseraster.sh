@@ -3,7 +3,7 @@
 
 mkdir data
 # -te -20037506 678011 -5383202 18592191 ### used for day met data
-gdalwarp -s_srs "EPSG:4326" -t_srs "EPSG:3857" -srcnodata -2147483647 -dstnodata -2147483647 -multi -of vrt /Users/nlh/Downloads/landscanworld.tif data/landscan.vrt
+gdalwarp -s_srs "EPSG:4326" -t_srs "EPSG:3857" -srcnodata -2147483647 -dstnodata -2147483647 -multi -of vrt RawData/landscanworld.tif data/landscan.vrt
 # /Users/nlh/Workspace/sharedata/TestDaymet/daymet_small.tif data/daymet_tester.tif
 
 # $ gdalwarp -tap -tr 30 30 -t_srs "etc..." -of vrt input_file.tif output_file.vrt
