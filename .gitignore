@@ -1,0 +1,6 @@
+**/data
+**/RawData
+**/scratch
+**/scratchdata
+.DS_Store
+*.pyc
