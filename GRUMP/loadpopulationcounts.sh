@@ -2,6 +2,8 @@
 mkdir data
 mkdir scratch
 
+BASEPATH=/data/grump
+
 NODATA=-407649103380480
 
 # -- Table: population.landscan
@@ -33,17 +35,19 @@ do
     -dstnodata $NODATA -multi -of vrt \
     scratch/gpw-v4-population-count_$YEAR.tif data/gpw-v4-population-count_$YEAR.vrt
 
-    gdal_translate -co compress=LZW data/gpw-v4-population-count_$YEAR.vrt data/gpw-v4-population-count_$YEAR.tif
+    mkdir $BASEPATH/population$YEAR
 
-    mkdir /data/grump/population$YEAR
+    gdal_translate -co compress=LZW data/gpw-v4-population-count_$YEAR.vrt /data/grump/population${YEAR}.tif
 
-    gdal_retile.py -v -targetDir /data/grump/population$YEAR -of GTIFF \
-    -co compress=LZW -ot Float32 -s_srs "EPSG:3857" data/gpw-v4-population-count_$YEAR.tif
+    
 
-
-    for FILEPATH in /data/grump/population$YEAR/*
-    do
-        raster2pgsql -s 3857 -R -a -F -b 1  -N $NODATA -f raster $FILEPATH population.grumppopulation|psql -U postgres -d urbis
-        psql -d urbis -U postgres -c "UPDATE population.grumppopulation SET year=$YEAR WHERE filename LIKE 'gpw-v4-population-count_$YEAR%'"
-    done
+    # gdal_retile.py -v -targetDir /data/grump/population$YEAR -of GTIFF \
+    # -co compress=LZW -ot Float32 -s_srs "EPSG:3857" data/gpw-v4-population-count_$YEAR.tif
+    raster2pgsql -s 3857 -R -a -F -b 1  -t auto -N $NODATA -f raster $BASEPATH/population${YEAR}.tif population.grumppopulation|psql -U postgres -d urbis
+    psql -d urbis -U postgres -c "UPDATE population.grumppopulation SET year=$YEAR WHERE filename LIKE 'gpw-v4-population-count_$YEAR%'"
+    # for FILEPATH in /data/grump/population$YEAR/*
+    # do
+    #     raster2pgsql -s 3857 -R -a -F -b 1  -N $NODATA -f raster $FILEPATH population.grumppopulation|psql -U postgres -d urbis
+    #     psql -d urbis -U postgres -c "UPDATE population.grumppopulation SET year=$YEAR WHERE filename LIKE 'gpw-v4-population-count_$YEAR%'"
+    # done
 done
