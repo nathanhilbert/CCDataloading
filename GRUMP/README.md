@@ -4,7 +4,8 @@ Gridded Population of the World (GPW), v4
 http://sedac.ciesin.columbia.edu/data/collection/gpw-v4
 
  - Download the 2000 to 2020 grided population data to this folder under
- ./RawData and run loadpopulationcount.sh
+ ./RawData 
+ - Run loadpopulationcount.sh
 
 [Metadata Link](http://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-count/metadata)
 
