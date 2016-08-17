@@ -29,3 +29,33 @@ mkdir data
 #       -skipfailures \
 #   2>&1 | tee import-$(date +%Y-%m-%dT%H:%m).log
 
+
+# VIEW
+# CREATE MATERIALIZED VIEW urbanclusters.landscan_urbannamed AS 
+#  WITH places AS (
+#          SELECT neurban.ogc_fid AS id,
+#             (array_agg(tplace.name ORDER BY (st_area(tplace.wkb_geometry)) DESC))[1] AS placename,
+#             (array_agg(tplace.ogc_fid ORDER BY (st_area(tplace.wkb_geometry)) DESC))[1] AS placeid,
+#             neurban.wkb_geometry AS geom
+#            FROM urbanclusters.landscanurbancluster neurban,
+#             urbanclusters.tigerlineplaces tplace
+#           WHERE st_intersects(neurban.wkb_geometry, tplace.wkb_geometry)
+#           GROUP BY neurban.ogc_fid
+#         )
+#  SELECT max(places.id) AS id,
+#     places.placeid,
+#     places.placename,
+#     st_union(places.geom) AS geom
+#    FROM places
+#   GROUP BY places.placeid, places.placename
+# WITH DATA;
+
+# ALTER TABLE urbanclusters.landscan_urbannamed
+#   OWNER TO urbis;
+
+
+
+# CREATE INDEX landscan_urbannaed_geom_idx
+#   ON urbanclusters.landscan_urbannamed
+#   USING gist
+#   (geom);
