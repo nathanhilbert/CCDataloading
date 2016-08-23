@@ -49,7 +49,7 @@ from itertools import product
 def buildTiles(src, tiledest, indextmp= None):
     #Parameters
     #Use the files ending in .img for the CDL
-    filename = "/data/rasterstorage/nlcd/impervious/nlcd_impervious_2011.tif"
+    filename = src
 
     tilesize = 5240
 
@@ -161,7 +161,7 @@ def createCatalog(src, tile_path, dest, index_path=None, grid=None):
                 raise ValueError("tiles must have same X and Y size")
 
             catalog["GridSize"] = xsize
-            catalog["Path"] = tile_path
+            catalog["Path"] = tile_path + '/'
         else:
             raise ValueError("tiles path does not exist: %s" % tile_path)
 
