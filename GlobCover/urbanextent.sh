@@ -27,7 +27,7 @@ Globcover_Urban
   -where "DN=1" \
   -s_srs EPSG:4326 -t_srs EPSG:3857 \
   -lco OVERWRITE=NO \
-  data/globcover_reclassed.shp
+  data/Globcover_Urban.shp
 
 
 psql -d urbis -U postgres -c "CREATE MATERIALIZED VIEW urbanclusters.globcover_urbannamed AS   \

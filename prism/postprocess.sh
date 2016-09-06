@@ -1,4 +1,4 @@
-BASEPATH=/Volumes/UrbisBackup/Workspace/Urbis/DataLoading/3DEP-DEM
+BASEPATH=/Volumes/UrbisBackup/Workspace/Urbis/DataLoading/prism
 
 mkdir $BASEPATH/scratch
 
