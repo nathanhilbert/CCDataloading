@@ -1,16 +1,14 @@
 BASEPATH=/Volumes/UrbisBackup/Workspace/Urbis/DataLoading/prism
 
+
 mkdir $BASEPATH/scratch
 
-# f=$BASEPATH/n08e151.zip
-# unzip -d $BASEPATH/scratch -n $f
 
-# FILES=/path/to/*
-for f in $BASEPATH/*.zip
+for f in $BASEPATH/RawData/*.zip
 do
 
 
-    unzip -d $BASEPATH/scratch -n $f
+    # unzip -d $BASEPATH/scratch -n $f
 
 
 
@@ -22,7 +20,7 @@ mkdir $BASEPATH/data
 
 for z in $BASEPATH/scratch/*.img 
 do
-    filebasename=$(basename "$z" ".img")
+    filebasename=$(basename "$z" ".bil")
 
     gdalwarp -s_srs "EPSG:4269" -t_srs "EPSG:3857"  \
     -multi -of vrt \
@@ -40,5 +38,5 @@ done
 ###############################################################
 #######THEN RAN on DATA
 # gdalbuildvrt ../fulldem.vrt *.tif
-# dal_translate -co compress=LZW ../fulldem.vrt ../fulldem.tif
+# gdal_translate -co compress=LZW ../fulldem.vrt ../fulldem.tif
 

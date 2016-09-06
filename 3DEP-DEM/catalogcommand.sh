@@ -1,0 +1,1 @@
+python ~/Workspace/Urbis/DataLoading/scripts/cataloger/cataloger.py --dest ./dem.json --tiles=./demtiled ./dem.tif 

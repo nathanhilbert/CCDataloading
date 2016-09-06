@@ -9,7 +9,7 @@ WITH places AS (
             neurban.wkb_geometry AS geom
            FROM urbanclusters.{1} neurban,
             urbanclusters.tigerlineplaces tplace,
-            population.censuspopulation as pop
+            urbanclusters.censuspopulation as pop
           WHERE st_intersects(neurban.wkb_geometry, tplace.wkb_geometry) AND 
         pop.geoidreal=tplace.geoidreal
           GROUP BY neurban.ogc_fid
