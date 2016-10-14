@@ -12,10 +12,26 @@ from io import BytesIO
 import os
 import sys
 import fiona
+import requests
 # from shapely.geometry import shape
 import os
 import zipfile
 from subprocess import Popen, PIPE
+import requests
+from bs4 import BeautifulSoup
+
+def download_file(url, dest):
+    if os.path.exists(dest):
+        print "skip", dest
+        return dest
+    # NOTE the stream=True parameter
+    r = requests.get(url, stream=True)
+    with open(dest, 'wb') as f:
+        for chunk in r.iter_content(chunk_size=1024): 
+            if chunk: # filter out keep-alive new chunks
+                f.write(chunk)
+                #f.flush() commented by recommendation from J.F.Sebastian
+    return dest
 
 
 try:
@@ -23,26 +39,21 @@ try:
 except:
   pass
 
+try:
+  os.mkdir("scratch")
+except:
+  pass
 
+BASE = "http://www2.census.gov/geo/tiger/TIGER2010/ROADS/"
 if not os.path.exists('data/tigerlineroads.shp'):
-
-
-
-    ftp = FTP('ftp2.census.gov') #/geo/tiger/TIGER2015/PLACE/
-    ftp.login() 
-    ftp.cwd('geo/tiger/TIGER2010/ROADS/')
-
-    filenames = ftp.nlst() # get filenames within the directory
-
+    res = requests.get(BASE)
+    soup = BeautifulSoup(res.text, 'html.parser')
     tigerlinedata = {}
+    for a in soup.find_all('a'):
+      if a.text.lower().find("tl_2010_") != -1:
+        download_file(BASE + a.text, 'scratch/' + a.text)
+        tigerlinedata[a.text] = 'scratch/' + a.text
 
-    for filename in filenames:
-        print("Downloading %s"%filename)
-        file = BytesIO()
-        ftp.retrbinary('RETR '+ filename, file.write)
-        tigerlinedata[filename] = file
-
-    ftp.quit() # This is the “polite” way to close a connection
 
 
 
@@ -51,21 +62,43 @@ if not os.path.exists('data/tigerlineroads.shp'):
     
     ZIPOUTPUT = 'data/tigerlinedata'
 
-    # print(zipfile_ob.namelist())
-    for zipped in tigerlinedata.values():
-        zipfile_ob = zipfile.ZipFile(zipped)
-        zipfile_ob.extractall(path='data/tigerlinedata/')
+    # # print(zipfile_ob.namelist())
+    # for zipped in tigerlinedata.values():
+    #     zipfile_ob = zipfile.ZipFile(zipped)
+    #     zipfile_ob.extractall(path='data/tigerlinedata/')
 
 
     # In[29]:
 
 
     features = []
+    first = True
     for file in os.listdir(ZIPOUTPUT):
         if file.endswith(".shp"):
-            with fiona.open(os.path.join(ZIPOUTPUT, file)) as f:
-                features += [feat for feat in f]
-    print(len(features))
+          print "doing ", file
+          # print "doing this now", os.path.join(ZIPOUTPUT, file)
+          # if first:
+          #     args = """ogr2ogr -f 'ESRI Shapefile' data/tigerlineroads.shp {0}"""\
+          #     .format(os.path.join(ZIPOUTPUT, file))
+          #     first = False
+          # else:
+          args = """/Library/Frameworks/GDAL.framework/Versions/1.11/Programs/ogr2ogr \
+            -nlt PROMOTE_TO_MULTI \
+            -s_srs EPSG:4269 -t_srs EPSG:3857 \
+             -f "PostgreSQL" \
+            PG:"host=ontoserv port=5434 dbname=urbisdata01 user=urbis password=urbis" \
+             -update -append {0} -nln tigerlineroads \
+          -lco SCHEMA=public """\
+            .format(os.path.join(ZIPOUTPUT, file))
+          
+          pipe = Popen(args, stdout=PIPE, shell=True)
+          text = pipe.communicate()[0]
+
+
+
+    #         with fiona.open(os.path.join(ZIPOUTPUT, file)) as f:
+    #             features += [feat for feat in f]
+    # print(len(features))
     # polygons =[shape(feature['geometry') for feature in fiona.open("polygons.shp")]
     # from shapely.ops import cascaded_union, unary_union
     # union_poly = cascaded_union(polygons) # or unary_union(polygons)
@@ -83,52 +116,43 @@ if not os.path.exists('data/tigerlineroads.shp'):
     #              ('PCICBSA', 'N'), ('PCINECTA', 'N'), ('MTFCC', 'G4110'), ('FUNCSTAT', 'A'), ('ALAND', 22143481), 
     #              ('AWATER', 212108), ('INTPTLAT', '+33.6942153'), ('INTPTLON', '-087.8311690')]
                 
-    schema = {'geometry': 'Polygon',
-        'properties': {'STATEFP': 'str',
-                      'PLACEFP': 'str',
-                      'PLACENS': 'str',
-                      'GEOID': 'str',
-                      'NAME': 'str',
-                      'NAMELSAD': 'str',
-                      'LSAD': 'str',
-                      'CLASSFP': 'str',
-                      'PCICBSA': 'str',
-                      'PCINECTA': 'str',
-                      'MTFCC': 'str',
-                      'FUNCSTAT': 'str',
-                      'ALAND': 'int',
-                      'AWATER': 'int',
-                      'INTPTLAT': 'str',
-                      'INTPTLON': 'str'}
-    }
+    # schema = {'geometry': 'Polygon',
+    #     'properties': {'STATEFP': 'str',
+    #                   'COUNTYFP': 'str',
+    #                   'LINEARID': 'str',
+    #                   'FULLNAME': 'str',
+    #                   'RTTYP': 'str',
+    #                   'MTFCC': 'str'}
+    # }
 
-    # Write a new Shapefile
-    with fiona.open('data/tigerlineplaces.shp', 'w', 'ESRI Shapefile', schema) as c:
-        ## If there are multiple geometries, put the "for" loop here
-        for f in features:
-            c.write(f)
+    # # Write a new Shapefile
+    # with fiona.open('data/tigerlineroads.shp', 'w', 'ESRI Shapefile', schema) as c:
+    #     ## If there are multiple geometries, put the "for" loop here
+    #     for f in features:
+    #         c.write(f)
 
 
+# args = """ogr2ogr -f "ESRI Shapefile" data/tigerlinedata3857.shp data/tigerlineroads.shp  -s_srs EPSG:4326 -t_srs \
+# EPSG:3857"""
+# pipe = Popen(args, stdout=PIPE, shell=True)
+# text = pipe.communicate()[0]
+
+# ogr2ogr -update -append -f "PostGreSQL" 
+# PG:"host=myserver user=myusername dbname=mydbname password=mypassword" TGR25025.RT1 layer CompleteChain -nln masuf -a_srs "EPSG:4269"
 
 
-args = """ogr2ogr -f "ESRI Shapefile" data/tigerlineplaces3857.shp data/tigerlineplaces.shp  -s_srs EPSG:4326 -t_srs \
-EPSG:3857"""
-pipe = Popen(args, stdout=PIPE, shell=True)
-text = pipe.communicate()[0]
+# args = """/Library/Frameworks/GDAL.framework/Versions/1.11/Programs/ogr2ogr \
+#   -progress -nlt PROMOTE_TO_MULTI \
+#   -f "PostgreSQL" \
+#   PG:"host=ontoserv port=5434 dbname=urbisdata01 user=urbis password=urbis" \
+#   -nln tigerlineroads \
+#   -lco SCHEMA=public \
+#   -s_srs EPSG:4269 -t_srs EPSG:3857 \
+#   -lco OVERWRITE=YES \
+#   data/tigerlinedata3857.shp """
 
-
-args = """/Library/Frameworks/GDAL.framework/Versions/1.11/Programs/ogr2ogr \
-  -progress -nlt PROMOTE_TO_MULTI \
-  -f "PostgreSQL" \
-  PG:"host=ontoserv port=5434 dbname=urbisdata01 user=urbis password=urbis" \
-  -nln tigerlineroads \
-  -lco SCHEMA=urbanclusters \
-  -s_srs EPSG:3857 -t_srs EPSG:3857 \
-  -lco OVERWRITE=YES \
-  data/tigerlineplaces3857.shp """
-
-pipe = Popen(args, stdout=PIPE, shell=True)
-text = pipe.communicate()[0]
+# pipe = Popen(args, stdout=PIPE, shell=True)
+# text = pipe.communicate()[0]
 
 
 # In[ ]:
