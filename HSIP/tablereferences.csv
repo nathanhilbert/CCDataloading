@@ -1,0 +1,561 @@
+Title,table
+Animal Aquaculture Facilities,AnimalAquacultureFacs
+Animal Slaughtering and Processing Facilities,AnimalSlaughterProcessFacs
+Beef Cattle Ranches and Farms,BeefCattleRanchesFarms
+Botanical and Zoological Gardens,BotanicalZoologicalGardens
+Cattle Feedlots,CattleFeedlots
+Dairy Cattle Farms,DairyCattleFarms
+Fruit and Tree Nut Farms,FruitTreeNutFarms
+Greenhouse Nursery and Floriculture Production Facilities,GreenhouseFloricultureProdFacs
+Hog and Pig Farms,HogPigFarms
+Hunting, Trapping and Game Propagation Facilities,HuntTrapGamePropagationFacs
+Oilseed and Grain Farms,OilseedGrainFarms
+Other Crop Farms,OtherCropFarms
+Poultry and Egg Production Farms,PoultryEggProdFarms
+Poultry Slaughtering and Processing Facilities,PoultrySlaughterProcessFacs
+State Fairgrounds,StateFairgrounds
+Vegetable and Melon Farms,VegetableMelonFarms
+Canada and Mexico Border Crossings,CanadaMexicoBorderCrossings
+Canada and U.S. Border,Canada_US_Border
+Mexico and U.S. Border,Mexico_US_Border
+U.S. Ports of Entry,US_PortsOfEntry
+Bathymetry Contours (Line),BathymetryContours
+CityLimits,CityLimits
+Congressional Districts,CongressionalDistricts
+Counties,Counties
+Critical Habitat Designations,CriticalHabitatDesignations
+Environmental Protection Agency (EPA) Regions,EPA_Regions
+Federal Lands,FederalLands
+HSIP 133 Cities Areas of Interest,HSIP_133CitiesAreasOfInterest
+Indian Reservations,IndianReservations
+Islands,Islands
+LandUseBndrys,LandUseBndrys
+National Forests,NationalForests
+National Marine Fisheries Service Regions,NatlMarineFisheriesServRegions
+Political Boundaries (Area),PoliticalBndrys
+Political Boundaries (Line),PoliticalBndrysLine
+Urbanized Areas,UrbanAreas
+U.S. County Boundaries,US_CountyBndrys
+U.S. State Boundaries,US_StateBndrys
+Biological Products Manufacturing Facilities,BiologicalProductsMfgFacs
+Chemical Manufacturing Facilities,ChemicalMfgFacs
+Environmental Protection Agency (EPA) Facility Registry Service (FRS) Emergency Response (ER) Comprehensive Environmental Response, Compensation, and Liability Information System (CERCLIS) Facilities,EPA_FRS_EmerResp_CERCLIS_Facs
+Environmental Protection Agency (EPA) Facility Registry Service (FRS) Emergency Response (ER) Facility Response Plan (FRP) Facilities,EPA_FRS_EmerResp_FRP_Facs
+Environmental Protection Agency (EPA) Facility Registry Service (FRS) Emergency Response (ER) Resource Conservation and Recovery Act, Treatment, Storage, and Disposal (RCRATSD) Facilities,EPA_FRS_EmerResp_RCRATSD_Facs
+Environmental Protection Agency (EPA) Facility Registry Service (FRS) Emergency Response (ER) Risk Management Plan (RMP) Facilities,EPA_FRS_EmerResp_RMP_Facs
+Environmental Protection Agency (EPA) Facility Registry Service (FRS) Emergency Response (ER) Toxic Release Inventory (TRI) Facilities,EPA_FRS_EmerResp_TRI_Facs
+Environmental Protection Agency (EPA) Facility Registry Service (FRS) Emergency Response (ER) Toxic Substances Control Act (TSCA) Facilities,EPA_FRS_EmerResp_TSCA_Facs
+Explosives Manufacturing Facilities,ExplosivesMfgFacs
+Hazardous Materials Routes,HazardousMaterialsRoutes
+Nitrogenous Fertilizer Plants,NitrogenousFertilizerPlants
+Pharmaceutical Preparation Manufacturing Facilities,PharmaceuticalPrepMfgFacs
+Phosphatic Fertilizer Plants,PhosphaticFertilizerPlants
+Solid Waste Landfill Facilities,SolidWasteLandfillFacs
+Fortune 500 Corporate Headquarters  ,Fortune500CorporateHdq
+Grocery Stores,GroceryStores
+Hotels and Motels,HotelsMotels
+Malls and Shopping Center Boundaries,MallsShoppingCenterBndrys
+Malls and Shopping Centers,MallsShoppingCenters
+AM Transmission Towers ,AM_TransTowers
+Antenna Structure Registrate,AntennaStructureRegistrate
+Area Code Boundaries,AreaCodeBndrys
+Broadband Radio Service (BRS) and Educational Broadband Service (EBS) Transmitters,BRS_EBS_Transmitters
+Cellular Service Areas,CellularServiceAreas
+Cellular Towers,CellularTowers
+FM Transmission Towers,FM_TransTowers
+Internet Exchange Points,InternetExchangePoints
+Internet Service Providers,InternetServiceProviders
+Information Technology (IT) Location Portals,IT_LocPortals
+Land Mobile Broadcast Towers,LandMobileBroadcastTowers
+Land Mobile Commercial Transmission Towers,LandMobileCommerTransTowers
+Land Mobile Private Transmission Towers,LandMobilePrivateTransTowers
+Microwave Service Towers,MicrowaveServiceTowers
+Paging Transmission Towers,PagingTransTowers
+TV Analog Station Transmitters,TV_AnalogStationTransmitters
+TV Broadcast Contours,TV_BroadcastContours
+TV Digital Station Transmitters,TV_DigitalStationTransmitters
+College Boundaries,CollegeBndrys
+Colleges and Universities,CollegesUniversities
+Day Care Centers,DayCareCenters
+Flight Schools,FlightSchools
+Private Schools,PrivateSchools
+Public Schools,PublicSchools
+Supplemental Colleges,SupplementalColleges
+Truck Driving Schools,TruckDrivingSchools
+ Air Medical Communication or Dispatch Centers,AirMedCommsDispatchCenters
+Air Medical Service Providers,AirMedServiceProviders
+American Red Cross Chapter Facilities  ,AmericanRedCrossChpFacs
+American Red Cross Chapter Regions,AmericanRedCrossChpRegions
+American Red Cross Divisions,AmericanRedCrossDivisions
+American Red Cross Headquarters,AmericanRedCrossHdq
+American Red Cross Regions,AmericanRedCrossRegions
+Airport, Hospital and Stand-alone Helipad Base Locations,AptHospOtherHelipadBaseLocs
+Emergency Medical Service (EMS) Stations,EMS_Stations
+Federal Emergency Management Agency (FEMA) Recovery Offices,FEMA_RecoveryOffices
+Federal Emergency Management Agency (FEMA) Regional Headquarters,FEMA_RegionalHdq
+Federal Emergency Management Agency (FEMA) Regions,FEMA_Regions
+Fire Stations,FireStations
+Hurricane Evacuation Routes,HurricaneEvacuationRoutes
+Ingestion Exposure Pathway Emergency Planning Zones (EPZ),IngestionExposurePathway_EPZ
+Local Emergency Operations Centers (EOC),Local_EOC
+National Shelter System Facilities,NationalShelterSystemFacs
+National Disaster Medical System (NDMS) Federal Coordinating Centers,NDMS_FedCoordinatingCenters
+Office for Bombing Prevention (OBP) National Counter-IED Capabilities Asset Database (NCCAD),OBP_NCCAD
+Plume Exposure Pathway Emergency Planning Zones (EPZ),PlumeExposurePathway_EPZ
+Public Safety Answering Point (PSAP) 911 Service Area Boundaries,PSAP_911ServiceAreas
+Receiving Hospitals,ReceivingHospitals
+Rotor Wing 10 Minute Fly Circles,RotorWing10MinuteFlyCircles
+Rotor Wing 20 Minute Fly Circles,RotorWing20MinuteFlyCircles
+Rotor Wing 30 Minute Fly Circles,RotorWing30MinuteFlyCircles
+State Emergency Operations Centers (EOC),State_EOC
+Biodiesel Plants,BiodieselPlants
+Electric Generating Units,ElecGeneratingUnits
+Electric Holding Company Areas,ElecHoldingCompanyAreas
+Electric Power Generation Plants,ElecPowerGenerationPlants
+Electric Power Transmission Lines,ElecPowerTransLines
+Electric Retail Service Territories,ElecRetailServiceTerritories
+Electric Utility Balancing Authority Areas,ElecUtilityBalancingAuthAreas
+Energy Distribution Control Facilities,EnergyDistControlFacs
+Environmental Protection Agency (EPA) Facility Registry Service (FRS) Power Plants,EPA_FRS_PowerPlants
+Ethanol Plants,EthanolPlants
+Federal Energy Regulatory Commission (FERC) Regions,FERC_Regions
+Flowgates (Line),FlowgatesLine
+Flowgates (Point),FlowgatesPoint
+Gas Meter Stations,GasMeterStations
+Gas Stations,GasStations
+Gulf Shipping Fairways,GulfOfMexicoShippingFairways
+Independent System Operator Boundaries,IndepSysOperatorBndrys
+Liquefied Natural Gas Import Terminals  ,LiquefiedNaturalGasImportTerms
+Lubricating Oils and Grease Plants,LubricatingOilsGreasePlants
+Natural Gas Compressor Stations,NaturalGasCompStations
+Natural Gas Distribution Service Territories,NaturalGasDistSvcTerritories
+Natural Gas Import/Export Points,NaturalGasImportExportLocs
+Natural Gas Liquid Pipelines,NaturalGasLiquidPipelines
+Natural Gas Market Hubs,NaturalGasMarketHubs
+Natural Gas Processing Plants,NaturalGasProcessingPlants
+Natural Gas Receipt and Delivery Points,NaturalGasReceiptDeliveryLocs
+Natural Gas Storage Facilities,NaturalGasStorageFacs
+North American Electric Reliability Council (NERC) Regions,NERC_Regions
+North American Electric Reliability Council (NERC) Reliability Coordinators,NERC_ReliabilityCoordinators
+North American Electric Reliability Council (NERC) Subregions,NERC_Subregions
+Non-Gasoline Alternative Fueling Stations,NonGasolineAltFuelingStations
+Nuclear Fuel Plants,NuclearFuelPlants
+Nuclear Power Plants,NuclearPowerPlants
+Nuclear Research Facilities,NuclearResearchFacs
+Outer Continental Shelf (OCS) Pacific Platforms,OCS_PacificPlatforms
+Oil and Natural Gas Fields,OilNaturalGasFields
+Oil and Natural Gas Interconnects,OilNaturalGasInterconMaintFacs
+Oil and Natural Gas Pipelines,OilNaturalGasPipelines
+Oil and Natural Gas Platforms,OilNaturalGasPlatforms
+Oil and Natural Gas Wells,OilNaturalGasWells
+Oil Refineries,OilRefineries
+Pacific Wells,PacificWells
+Petroleum Pumping Stations,PetroleumPumpingStations
+Planning Areas,PlanningAreas
+Petroleum, Oil and Lubricant (POL) Terminal, Storage Facility, Tank Farms,POL_TermsStorFacsTankFarms
+Propane Retailer Locations,PropaneRetailerLocs
+Radiological Assistance Program (RAP) Regions,RAP_Regions
+Strategic Petroleum Reserves,StrategicPetroleumReserves
+Substations,Substations
+Brokerages,Brokerages
+Bullion Repositories,BullionRepositories
+Central Reserve Depositories and Federal Reserve Banks,CentralResDepositFedResBanks
+Commodity Exchanges,CommodityExchanges
+Credit Union Headquarters,CreditUnionHdq
+Federal Deposit Insurance Corporation (FDIC) Insured Banks,FDIC_InsuredBanks
+Financial Processing Centers,FinancialProcessCenters
+Foreign Bank Branches and Agencies,ForeignBankBranchesAgencies
+Foreign Trade and International Banking Facilities,ForeignTradeIntlBankingFacs
+Gold Bullion Repositories,GoldBullionRepositories
+Government Financial Processing Centers,GovtFinancialProcessCenters
+Insurance Company Facilities,InsuranceCompanyFacs
+Large Mutual Fund Facilities,LargeMutualFundFacs
+U.S. Federal Reserve Systems,US_FedResSystems
+U.S. Mint - Bureau of Engraving and Printing (BEP) Facilities,US_Mint_BEP_Facs
+Animal Food Manufacturing Facilities,AnimalFoodMfgFacs
+Bakeries,Bakeries
+Bottled Water Manufacturing Facilities,BottledWaterMfgFacs
+Breweries,Breweries
+Canneries,Canneries
+Dairy Product Manufacturing Facilities,DairyProductMfgFacs
+Distilleries,Distilleries
+Fruit and Vegetable Preserving and Specialty Food Manufacturing Facilities,FruitVegPresSpecialFoodMfgFacs
+Grain Mills,GrainMills
+Ice Manufacturing Facilities,IceMfgFacs
+Meat Packing and Processing Plants,MeatPackProcessPlants
+Public Refrigerated Warehouses,PublicRefrigeratedWarehouses
+Seafood Product Preparation and Packaging Facilities,SeafoodProductPrepPackgFacs
+Soft Drink Manufacturing Facilities,SoftDrinkMfgFacs
+Sugar and Confectionary Product Manufacturing Facilities,SugarConfectionProductMfgFacs
+Cities and Towns,CitiesTowns
+Cities and Towns NTAD,CitiesTowns_NTAD
+Geographic Names Information System (GNIS) Admin Features,GNIS_AdminFeatures
+Geographic Names Information System (GNIS) Antarctica Features,GNIS_AntarcticaFeatures
+Geographic Names Information System (GNIS) Community Features,GNIS_CommunityFeatures
+Geographic Names Information System (GNIS) Cultural Features,GNIS_CulturalFeatures
+Geographic Names Information System (GNIS) Historical Features,GNIS_HistFeatures
+Geographic Names Information System (GNIS) Hydrography Lines,GNIS_HydrographyLines
+Geographic Names Information System (GNIS) Hydrography Points,GNIS_HydrographyPoints
+Geographic Names Information System (GNIS) Landform Features,GNIS_LandformFeatures
+Geographic Names Information System (GNIS) Structures,GNIS_Structures
+Geographic Names Information System (GNIS) Transportation Features,GNIS_TransportationFeatures
+Air National Guard (ANG) Installation Boundaries,ANG_InstallationBndrys
+Air National Guard (ANG) Sites,ANG_Sites
+Army National Guard (ARNG) Installations,ARNG_Installations
+City Halls,CityHalls
+Court Houses,CourtHouses
+Department of Defense (DoD) Site Boundaries,DoD_SiteBndrys
+Department of Defense (DoD) Site Building Footprints,DoD_SiteBuildingFootprints
+Department of Defense (DoD) Site Locations,DoD_SiteLocs
+Department of Defense (DoD) Site Roads,DoD_SiteRoads
+Environmental Protection Agency (EPA) Facilities,EPA_Facilities
+Food and Drug Administration (FDA) Office Facilities,FDA_OfficeFacilities
+Formerly Used Defense Sites (FUDS) Public Properties ,FUDS_PublicProperties
+Formerly Used Defense Sites (FUDS) Public Property Boundaries,FUDS_PublicPropertyBndrys
+Formerly Used Defense Sites (FUDS) Public Munitions Response Areas (MRA),FUDS_Public_MRA
+Formerly Used Defense Sites (FUDS) Public Munitions Response Sites (MRS),FUDS_Public_MRS
+Governors Mansions,GovernorsMansions
+General Services Administration (GSA) Owned or Leased Properties,GSA_OwnedLeasedProperties
+Indian Lands and Native Entities,IndianLandsNativeEntities
+International Affairs Government Offices,IntlAffairsGovtOfffices
+National Guard Joint Operation Centers (JOC),JOC
+Major State Government Buildings,MajorStateGovtBuildings
+Military Base Boundaries,MilitaryBaseBndrys
+National Guard Aviation Sites,NatlGuardAviationSites
+National Guard Maintenance Sites,NatlGuardMaintenanceSites
+National Guard Readiness Centers,NatlGuardReadinessCenters
+National Guard State/Territory Joint Force Headquarters (JFHQ),NatlGuardStateTerritory_JFHQ
+National Guard Training Sites,NatlGuardTrainingSites
+National Guard Chemical, Biological, Radiological/Nuclear and Explosive (CBRNE) Enhanced Response Force Package (CERFP) Homeland Response Force (HRF) Units Locations,NatlGuard_CBRNE_CERFP_HRF_Locs
+National Guard Weapons of Mass Destruction/Civil Support Teams,NatlGuard_WMD_CST
+National Security Government Military Facilities,NatlSecurityGovtMilitaryFacs
+Space Research and Technology Facilities,SpaceResearchTechFacs
+State and Local Fusion Centers,StateAndLocalFusionCenters
+State Capitol Buildings,StateCapitolBuildings
+U.S. Army Corps of Engineers (USACE) Civil Works Districts,USACE_CivilWorksDistricts
+U.S. Army Corps of Engineers (USACE) Civil Works Divisions,USACE_CivilWorksDivisions
+U.S. Army Corps of Engineers (USACE) Military Districts,USACE_MilitaryDistricts
+U.S. Army Corps of Engineers (USACE) Military Divisions,USACE_MilitaryDivisions
+U.S. Army Corps of Engineers (USACE) Offices,USACE_Offices
+U.S. Coast Guard (USCG) Districts,USCG_Districts
+U.S. Coast Guard (USCG) Sectors,USCG_Sectors
+U.S. Armed Forces Recruiting Centers,US_ArmedForcesRecruitCenters
+U.S. Army Reserve Locations,US_ArmyReserveLocs
+Weather Radar Stations,WeatherRadarStations
+Dept. of Homeland Security (DHS) Infrastructure Asset List (IAL) Points,DHS_IAL_Points
+U.S. Customs and Border Protection (CBP) Office of Field Operations (OFO) Area of Operations (AOR) Locations,CBP_OFO_AOR_Locs
+U.S. Customs and Border Protection (CBP) Office of Field Operations (OFO) Container Security Initiative (CSI) Locations,CBP_OFO_CSI_Locs
+U.S. Customs and Border Protection (CBP) Office of Field Operations (OFO) Facilities,CBP_OFO_Facs
+U.S. Customs and Border Protection (CBP) Office of Field Operations (OFO) Field Office Headquarters,CBP_OFO_FieldOfficeHdq
+U.S. Customs and Border Protection (CBP) US Border Patrol (USBP) Detailed Sectors,CBP_USBP_DetailedSectors
+U.S. Customs and Border Protection (CBP) US Border Patrol (USBP) Sector Headquarters,CBP_USBP_SectorHdq
+U.S. Customs and Border Protection (CBP) US Border Patrol (USBP) Stations,CBP_USBP_Stations
+Dept. of Homeland Security (DHS) Immigration and Customs Enforcement (ICE) Facilities,DHS_ICE_Facs
+Dept. of Interior (DOI) Bureau of Indian Affairs (BIA) Law Enforcement Facilities,DOI_BIA_LawEnforcementFacs
+Dept. of Interior (DOI) Bureau of Land Management (BLM) Law Enforcement Facilities,DOI_BLM_LawEnforcementFacs
+Dept. of Interior (DOI) Bureau of Reclamation (BOR) Law Enforcement Facilities,DOI_BOR_LawEnforcementFacs
+Dept. of Interior (DOI) Fish and Wildlife Service (FWS) Law Enforcement Facilities,DOI_FWS_LawEnforcementFacs
+Dept. of Interior (DOI) National Park Service (NPS) Law Enforcement Facilities,DOI_NPS_LawEnforcementFacs
+Dept. of Interior (DOI) U.S. Park Police (USPP) Law Enforcement Facilities,DOI_USPP_LawEnforcementFacs
+Federal Bureau of Investigation (FBI) Field Office Jurisdiction/Divisions,FBI_FieldOfficeJurisDivisions
+Federal Bureau of Investigation (FBI) Offices,FBI_Offices
+Federal Bureau of Investigation (FBI) Resident Agency (RA) Districts,FBI_RA_Districts
+Law Enforcement Locations,LawEnforcementLocs
+Prison Boundaries,PrisonBndrys
+U.S. Postal Service (USPS) Postal Inspection Service Facilities,USPS_PostalInspServiceFacs
+U.S. District Court Jurisdictions,US_DistrictCourtJuris
+U.S. Postal Inspection Service Divisions,US_PostalInspServiceDivisions
+Air Shipping and Mailing Centers,AirShippingMailingCenters
+DHL Facilities,DHL_Facs
+FedEx Facilities,FedEx_Facs
+General Freight Trucking Terminals,GeneralFreightTruckingTer
+Post Office Facilities,PostOfficeFacs
+Private Non-Retail Shipping Facilities,PrivateNonRetailShippingFacs
+UPS Facilities,UPS_Facs
+U.S. Postal Service (USPS) Administrative Offices,USPS_AdminOffices
+U.S. Postal Service (USPS) Mail Collection Boxes,USPS_MailCollectionBoxes
+U.S. Postal Service (USPS) Post Offices,USPS_PostOffices
+U.S. Postal Service (USPS) Processing Centers,USPS_ProcessingCenters
+U.S. Postal Service (USPS) Support Facilities,USPS_SupportFacs
+Zip Code Boundaries,ZipCodeBndrys
+Apparel Manufacturing Facilities,ApparelMfgFacs
+Armament Manufacturing Facilities,ArmamentMfgFacs
+Computer and Electronic Product Manufacturing Facilities,ComputerElectrnProductMfgFacs
+Defense Industrial Base (DIB) Facilities,DIB_Facs
+Electrical Equipment Appliance and Component Manufacturing Facilities,ElecEquipApplianceComponMfgFacs
+Fabricated Metal Product Manufacturing Facilities,FabricatedMetalProductMfgFacs
+Furniture and Related Products Manufacturing Facilities,FurnitureRelatedProductMfgFacs
+General Manufacturing Facilities,GeneralMfgFacs
+IndustrialComplexes,IndustrialComplexes
+Leather and Allied Product Manufacturing Facilities,LeatherAlliedProductMfgFacs
+Logging Operations,LoggingOps
+Machinery Manufacturing Facilities,MachineryMfgFacs
+Medical Equipment and Supplies Manufacturing Facilities,MedEquipSuppliesMfgFacs
+Nonmetallic Mineral Product Manufacturing Facilities,NonmetallicMinProductMfgFacs
+Paper Manufacturing Facilities,PaperMfgFacs
+Plastics and Rubber Product Manufacturing Facilities,PlasticRubberProductMfgFacs
+Printing and Related Support Facilities,PrintingRelatedSupportFacs
+Steel Plants,SteelPlants
+Textile Plants,TextilePlants
+Textile Product Mills,TextileProductMills
+Tobacco Manufacturing Facilities,TobaccoMfgFacs
+Transportation Equipment Manufacturing Facilities,TransportEquipMfgFacs
+Wood Product Manufacturing Facilities,WoodProductMfgFacs
+Agricultural Mineral Operations,AgriculturalMinOps
+Construction Minerals Operations,ConstructionMinOps
+Crushed Stone Operations,CrushedStoneOps
+Ferrous Metal Mines,FerrousMetalMines
+Ferrous Metal Processing Plants,FerrousMetalProcessPlants
+Mines and Mineral Resources,MinesMinResources
+Miscellaneous Industrial Mineral Operations,MiscellaneousIndMinOps
+Nonferrous Metal Mines,NonferrousMetalMines
+Nonferrous Metal Processing Plants,NonferrousMetalProcessPlants
+Refractory, Abrasive and Other Industrial Mineral Operations,RefractAbrasiveOtherIndMinOps
+Sand and Gravel Operations,SandGravelOps
+Uranium and Vanadium Deposits,UraniumVanadiumDeposits
+U.S. Coal Fields,US_CoalFields
+Borehole Points - Flood Control,BoreholePoints
+Closure Structure Lines - Flood Control,ClosureStructureLines
+Encroachment Points - Flood Control,EncroachmentPoints
+Flood Fight Points - Flood Control,FloodFightPoints
+Floodwall Lines - Flood Control,FloodwallLines
+Gravity Drain Lines - Flood Control,GravityDrainLines
+Levee Centerlines - Flood Control,LeveeCenterlines
+Levee Crossing Points - Flood Control,LeveeCrossingPoints
+Levee Cross Section Lines - Flood Control,LeveeCrossSectionLines
+Leveed Areas - Flood Control,LeveedAreas
+Levee Distress Points - Flood Control,LeveeDistressPoints
+Levee Inspection Lines - Flood Control,LeveeInspectionLines
+Levee Inspection Points - Flood Control,LeveeInspectionPoints
+Levee Pump Stations - Flood Control,LeveePumpStations
+Levee Relief Well Points - Flood Control,LeveeReliefWellPoints
+Levee Station Points - Flood Control,LeveeStationPoints
+Levee System Align Lines - Flood Control,LeveeSystemAlignLines
+Piezometer Points - Flood Control,PiezometerPoints
+Rehabilitation Lines - Flood Control,RehabilitationLines
+Sand Boil Points - Flood Control,SandBoilPoints
+Toe Drain Lines - Flood Control,ToeDrainLines
+Base Flood Elevation (BFE) Lines,BFE_Lines
+Coastal Barrier Resources System (CBRS) Boundaries,CBRS_Bndrys
+Flood Hazard Areas - High Risk,FloodHazardAreasHighRisk
+Flood Hazard Areas - Moderate to Low Risk,FloodHazardAreasModToLowRisk
+Floodplain Cross Section Lines,FloodplainCrossSectionLines
+Hydraulic Structures,HydraulicStructures
+Deep-ocean Assessment and Reporting of Tsunamis (DART) Stations,DART_Stations
+Fire Perimeters (2012),FirePerimeters2012
+Historical Fire Perimeters (2000 to 2011),HistFirePerimeters2000_2011
+Historical Holocene Volcano Locations,HistHoloceneVolcanoLocs
+Historical Significant Earthquake Locations,HistSignifEarthquakeLocs
+Historical Significant Volcanic Eruption Locations,HistSignifVolcanicEruptLocs
+Historical Tornado Tracks,HistTornadoTracks
+Historical Tropical Storm Tracks,HistTropicalStormTracks
+Historical Tsunami Event Locations with Runups,HistTsunamiEventLocsWithRunups
+Landslide Regions,LandslideRegions
+Plate Boundaries,PlateBndrys
+Quaternary Fault Lines,QuaternaryFaultLines
+Seismic Ground Motion Hazards with 10 Percent Probability,SeismicHazards10PercentProb
+Seismic Ground Motion Hazards with 2 Percent Probability,SeismicHazards2PercentProb
+Streamflow Gaging Stations,StreamflowGagingStations
+Tsunami Tide Gauges,TsunamiTideGauges
+Blood and Organ Banks,BloodOrganBanks
+Cemeteries and Crematories,CemeteriesCrematories
+Centers for Disease Control,CentersForDiseaseContro
+Funeral Homes and Funeral Service Facilities,FuneralHomesServiceFacs
+Hospital Boundaries,HospitalBndrys
+Hospitals,Hospitals
+Nursing Homes,NursingHomes
+Pharmacies,Pharmacies
+Public Health Departments,PublicHealthDepartments
+Urgent Care Facilities,UrgentCareFacs
+Veterans Health Administration Medical Facilities,VeteransHealthAdminMedFacs
+Veterinary Service Facilities,VeterinaryServiceFacs
+All Places of Worship,AllPlacesOfWorship
+Amusement and Theme Parks,AmusementThemeParks
+HERE 2014 Q2 Parks and Recreation Points for the United States, including Puerto Rico and the US Virgin Islands, Canada, Mexico, the Bahamas, and the Cayman Islands in SDC Format, Released Quarterly,Campgrounds
+Casinos,Casinos
+Catholic Churches,CatholicChurches
+Cemetery Boundaries,CemeteryBndrys
+Community Centers,CommunityCenters
+Convention Centers,ConventionCenters
+Cruise Line Terminals,CruiseLineTerminals
+Drinking Establishments,DrinkingEstablishments
+Golf Course Boundaries,GolfCourseBndrys
+Golf Courses,GolfCourses
+Highway Rest Areas,HighwayRestAreas
+Historic Sites,HistoricSites
+Jewish Synagogues,JewishSynagogues
+Libraries,Libraries
+Major Sport Venues,MajorSportVenues
+Marinas,Marinas
+Mobile Home Parks,MobileHomeParks
+Mosques,Mosques
+Museums,Museums
+National Parks and Monument Boundaries,NationalParksMonumentsBndrys
+Protestant Churches,ProtestantChurches
+Ski Resorts,SkiResorts
+Sports Complex,SportsComple
+Sports Complex Boundaries,SportsComplexBndrys
+State, County and Local Parks,StateCountyLocalParks
+State, County and Local Park Boundaries,StateCountyLocalParksBndrys
+Theaters and Performing Arts Centers,TheatersPerformingArtsCenters
+Tourist Attractions,TouristAttractions
+Vineyards and Wineries,VineyardsWineries
+Aeronautical Obstructions,AeronauticalObstructions
+Aeronautical Navigational Aids (NAVAID) Facilities,Aeronautical_NAVAID_Facs
+Aircraft Landing Facilities,AircraftLandingFacs
+Aircraft Road Boundaries,AircraftRoadBndrys
+Airport Boundaries,AirportBndrys
+Federal Aviation Administration (FAA) Air Route Traffic Control Centers (ARTCC),FAA_ARTCC
+Federal Aviation Administration (FAA)  Regions,FAA_Regions
+Runways,Runways
+Amtrak Stations,AmtrakStations
+Automatic Traffic Recorder (ATR) Stations,ATR_Stations
+Bus Stations,BusStations
+Fixed Guideway Transit Links,FixedGuidewayTransitLinks
+Fixed Guideway Transit Stations,FixedGuidewayTransitStations
+Intermodal Terminal Facilities,IntermodalTerminalFacs
+National Bridge Inventory (NBI) Bridges,NBI_Bridges
+Rail Junctions,RailJunctions
+Railroad Bridges,RailroadBridges
+Railroads,Railroads
+Railroad Stations,RailroadStations
+Railroad Tunnels,RailroadTunnels
+Railroad Yards,RailroadYards
+Road and Railroad Tunnels  ,RoadRailroadTunnels
+Unpaved Roads, Tracks and Trails,UnpavedRoadsTracksTrails
+Weigh-in-Motion Stations,WeighInMotionStations
+Administrative Areas where Vessels May Anchor - USACE IENC,AdminAnchorAreas
+Airports - USACE IENC,Airports
+Anchorages - USACE IENC,Anchorages
+Anchor and Mooring Locations,AnchorMooringLocs
+Breakwater Lines,BreakwaterLines
+Breakwater Locations,BreakwaterLocs
+Bridge Areas - USACE IENC,BridgeAreas
+Building Areas - USACE IENC,BuildingAreas
+Building Locations - USACE IENC,BuildingLocs
+Built Up Areas - USACE IENC,BuiltUpAreas
+  Canal Areas - USACE IENC,CanalAreas
+Canal Lines - USACE IENC,CanalLines
+Canals,Canals
+Caution Area Locations - USACE IENC,CautionAreaLocs
+Caution Areas - USACE IENC,CautionAreas
+Channels,Channels
+Coastlines - USACE IENC,Coastlines
+Conveyor Areas - USACE IENC,ConveyorAreas
+Conveyor Lines - USACE IENC,ConveyorLines
+Crane Areas - USACE IENC,CraneAreas
+Crane Locations - USACE IENC,CraneLocs
+Dam Areas - USACE IENC,DamAreas
+Dam Lines - USACE IENC,DamLines
+Data Coverage Areas - USACE IENC,DataCoverageAreas
+Data Quality Assessment Areas - USACE IENC,DataQualAsstAreas
+Daymark Locations - USACE IENC,DaymarkLocs
+Deepwater Ports,DeepwaterPorts
+Depth Areas - USACE IENC,DepthAreas
+Depth Contours - USACE IENC,DepthContours
+Distance Marks- USACE IENC,DistanceMarks
+Dry Docks - USACE IENC,DryDocks
+Ferry Locations,FerryLocs
+Ferry Routes - USACE IENC,FerryRoutes
+Ferry Routes,Ferry_Routes
+Floating Docks - USACE IENC,FloatingDocks
+Floodwalls - USACE IENC,Floodwalls
+Harbor Administrative Areas - USACE IENC,HarborAdminAreas
+Harbor Facility Areas - USACE IENC,HarborFacAreas
+Harbor Facility Locations - USACE IENC,HarborFacLocs
+Hulke Areas - USACE IENC,HulkeAreas
+Inland Waterway Mile Markers  ,InlandWaterwayMileMarkers
+Lakes - USACE IENC,Lakes
+Landmark Areas - USACE IENC,LandmarkAreas
+Landmark Locations - USACE IENC,LandmarkLocs
+Land Region Areas - USACE IENC,LandRegionAreas
+Land Region Locations - USACE IENC,LandRegionLocs
+Land Areas - USACE IENC,LandSurfaceAreas
+Lateral Beacons - USACE IENC,LateralBeacons
+Lateral Buoys - USACE IENC,LateralBuoys
+Levee Areas - USACE IENC,LeveeAreas
+Levee Lines - USACE IENC,LeveeLines
+Lock Gate Areas - USACE IENC,LockGateAreas
+Lock Gate Lines - USACE IENC,LockGateLines
+Locks,Locks
+Lock Traffic Signal Stations - USACE IENC,LockTrafficSigSta
+Major U.S. Port Facilities,MajorUSPortFacs
+Marine Jurisdiction Boundaries,MarineJurisdictionBndrys
+Mooring Facility Areas - USACE IENC,MooringFacAreas
+Mooring Facility Lines - USACE IENC,MooringFacLines
+Mooring Facility Locations - USACE IENC,MooringFacLocs
+Nautical Publication Information Areas - USACE IENC,NautPubInfoAreas
+Nautical Navigation Aids (NAVAID) Locations,NAVAID_Locs
+Navigable Waterway Network Lines,NavigableWaterwayNetwLines
+Navigable Waterway Network Node Locations,NavigableWaterwayNetwNodeLocs
+Navigation Lights - USACE IENC,NavLights
+Navigation System of Marks Areas - USACE IENC,NavSysOfMarksAreas
+Obstruction Areas - USACE IENC,ObstructionAreas
+Obstruction Lines - USACE IENC,ObstructionLines
+Obstruction Locations - USACE IENC,ObstructionLocs
+Outer Continental Shelf (OCS) Blocks and Official Protraction Diagram Areas,OCS_BlksOfclProtraDiagramAreas
+Overhead Cables - USACE IENC,OvhdCables
+Overhead Pipeline Lines - USACE IENC,OvhdPipelineLines
+Piers, Wharves and Quays,PiersWharvesQuays
+Pile Locations - USACE IENC,PileLocs
+Pipeline Areas - USACE IENC,PipelineAreas
+Port Facilities,PortFacs
+Pylon Areas - USACE IENC,PylonAreas
+Pylon Locations - USACE IENC,PylonLocs
+Railways - USACE IENC,Railways
+Recommended Tracks - USACE IENC,RecommendedTracks
+Regulated Navigational Areas,RegulatedNavAreas
+Restricted Navigation Areas - USACE IENC,RestrictedNavAreas
+River Areas - USACE IENC,RiverAreas
+River Gauges - USACE IENC,RiverGauges
+River Lines - USACE IENC,RiverLines
+Roads - USACE IENC,Roads
+Safety Zones,SafetyZones
+Sea Areas Locations - USACE IENC,SeaAreaLocs
+Sea Areas - USACE IENC,SeaAreas
+Security Zones,SecurityZones
+Shipping Fairways  ,ShippingFairways
+Shoreline Construction Areas - USACE IENC,ShoreliConstrnAreas
+Shoreline Construction Lines - USACE IENC,ShoreliConstrnLines
+Shoreline Construction Locations - USACE IENC,ShoreliConstrnLocs
+Sloped Ground Areas - USACE IENC,SlopedGroundAreas
+Sloped Ground Lines - USACE IENC,SlopedGroundLines
+Small Craft Facility Areas - USACE IENC,SmallCraftFacAreas
+Small Craft Facility Locations - USACE IENC,SmallCraftFacLocs
+Special Purpose Buoys - USACE IENC,SpecialPurposeBuoys
+Storage Tank or Silo Areas - USACE IENC,StorageTankOrSiloAreas
+Storage Tank or Silo Locations - USACE IENC,StorageTankOrSiloLocs
+Submarine Cable Lines - USACE IENC,SubCableLines
+Submarine Cables,SubCables
+Submarine Pipeline Lines - USACE IENC,SubPipelineLines
+Submarine Pipeline Locations - USACE IENC,SubPipelineLocs
+Underwater Rocks - USACE IENC,UnderwaterRocks
+U.S. Coast Guard (USCG) Captain of the Port Zones,USCG_CaptainOfThePortZones
+U.S. Coast Guard (USCG) Maritime Differential GPS (DGPS) Locations,USCG_MartmDiff_GPS_DGPS_Locs
+Wrecks - USACE IENC,Wrecks
+Wrecks And Obstructions,WrecksAndObstructions
+Air, Water and Solid Waste Management Plants,AirWaterSolidWasteMgmtPlants
+Aquifers,Aquifers
+Dam Lines,DamLines
+Drinking Water Sources,DrinkingWaterSources
+Drinking Water Treatment Plants,DrinkingWaterTreatmentPlants
+Environmental Protection Agency (EPA) Facility Registry Service (FRS) Wastewater Treatment Plants,EPA_WasteWaterTreatmentPlants
+NHD Area High Resolution,NHD_AreasHighReso
+NHD Area Medium Resolution,NHD_AreasMediumReso
+NHD Flowline High Resolution,NHD_FlowlinesHighReso
+NHD Flowline Medium Resolution,NHD_FlowlinesMediumReso
+NHD Line High Resolution,NHD_LinesHighReso
+NHD Line Medium Resolution,NHD_LinesMediumReso
+NHD Point Event,NHD_PointEvents
+NHD Point High Resolution,NHD_PointsHighReso
+NHD Point Medium Resolution,NHD_PointsMediumReso
+NHD Waterbody High Resolution,NHD_WaterbodiesHighReso
+NHD Waterbody Medium Resolution,NHD_WaterbodiesMediumReso
+National Inventory of Dams (NID),NID
+Oceans,Oceans
+The Great Lakes,TheGreatLakes
+U.S. Army Corps of Engineers (USACE) Inundation Areas,USACE_InundationAreas
+U.S. Army Corps of Engineers (USACE) Owned and Operated Reservoirs,USACE_OwnedOperatedReservoirs
+Water Boundary Areas,WaterBndryAreas
+Watershed Boundary Areas,WatershedBndryAreas
+Watershed Boundary Lines,WatershedBndryLines
