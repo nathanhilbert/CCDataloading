@@ -1,4 +1,4 @@
-SOURCEEPSG="EPSG:5070"
+SOURCEEPSG="+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"
 DESTEPSG="EPSG:3857"
 
 BASEPATH=/data/rasterstorage/nlcd/impervious
@@ -17,7 +17,9 @@ do
 
     # unzip -o -d scratch RawData/$ZIPFILE
 
-    gdalwarp -s_srs "EPSG:5070" -t_srs "EPSG:3857" \
+    # See http://spatialreference.org/ref/sr-org/6630/
+
+    gdalwarp -s_srs "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs" -t_srs "EPSG:3857" \
     -multi -of vrt \
     RawData/nlcd_${YEAR}_impervious_2011_edition_2014_10_10/nlcd_${YEAR}_impervious_2011_edition_2014_10_10.img data/nlcd_impervious_${YEAR}.vrt
 
