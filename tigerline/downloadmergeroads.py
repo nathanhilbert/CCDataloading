@@ -64,8 +64,11 @@ if not os.path.exists('data/tigerlineroads.shp'):
 
     # # print(zipfile_ob.namelist())
     # for zipped in tigerlinedata.values():
+    #   try:
     #     zipfile_ob = zipfile.ZipFile(zipped)
     #     zipfile_ob.extractall(path='data/tigerlinedata/')
+    #   except Exception,e:
+    #     print e
 
 
     # In[29]:
@@ -86,7 +89,7 @@ if not os.path.exists('data/tigerlineroads.shp'):
             -nlt PROMOTE_TO_MULTI \
             -s_srs EPSG:4269 -t_srs EPSG:3857 \
              -f "PostgreSQL" \
-            PG:"host=ontoserv port=5434 dbname=urbisdata01 user=urbis password=urbis" \
+            PG:"host=ontoserv port=5432 dbname=urbisdata01 user=urbis password=urbis" \
              -update -append {0} -nln tigerlineroads \
           -lco SCHEMA=public """\
             .format(os.path.join(ZIPOUTPUT, file))

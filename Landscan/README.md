@@ -36,10 +36,12 @@ NOTE: If no previous action is taken, this file will automatically be deleted on
 Landscan 2015 Urban Clusters
 --------------------
 
+** Run urbanclusterprocess.sh **
+
+
 Custom Dataset developed by taking the USDA definition of Urban Cluster by
 using 500 people/mile^2 with at least one mile of 1000 people/mile^2 in the block.
 
-**The creation script is not yet complete.  This was done with QGIS**
 
  - Download the landscan data
  - Reclass any cell values under 193 to 0 and 193 and above to 1

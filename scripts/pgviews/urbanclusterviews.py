@@ -43,37 +43,37 @@ tables = {
     'ne_10m_urban_areas': 'ne_10m_urbannamed'
 }
 
-POSTGRESURI = 'postgresql://urbis:urbis@localhost:5432/urbis'
+POSTGRESURI = 'postgresql://urbis:urbis@ontoserv:5432/urbisdata01'
 engine = create_engine(POSTGRESURI)
 
-try:
-    engine.execute(DROPVIEW.format('cityoptions'))
-except Exception,e:
-    print e
+# try:
+#     engine.execute(DROPVIEW.format('cityoptions'))
+# except Exception,e:
+#     print e
 
 
-for table, viewname in tables.iteritems():
-    basesql = BASEVIEW.format(viewname, table)
-    setownersql = SETOWNER.format(viewname)
-    setindexsql = SETINDEX.format(viewname)
-    try:
-        engine.execute(DROPVIEW.format(viewname))
-    except Exception,e:
-        print e
+# for table, viewname in tables.iteritems():
+#     basesql = BASEVIEW.format(viewname, table)
+#     setownersql = SETOWNER.format(viewname)
+#     setindexsql = SETINDEX.format(viewname)
+#     try:
+#         engine.execute(DROPVIEW.format(viewname))
+#     except Exception,e:
+#         print e
 
-    try:
-        engine.execute(basesql)
-        engine.execute(setownersql)
-        engine.execute(setindexsql)
-    except Exception,e:
-        print e
+#     try:
+#         engine.execute(basesql)
+#         engine.execute(setownersql)
+#         engine.execute(setindexsql)
+#     except Exception,e:
+#         print e
 
 
-uniontables = ["""SELECT urbanclusters.{0}.placename,
-            urbanclusters.{0}.placeid
-           FROM urbanclusters.{0}""".format(t) for t in tables.values()]
+uniontables = ["""SELECT urbandefinitions.{0}.placename,
+            urbandefinitions.{0}.placeid
+           FROM urbandefinitions.{0}""".format(t) for t in tables.values()]
 
-placeoptions = """CREATE MATERIALIZED VIEW urbanclusters.cityoptions AS 
+placeoptions = """CREATE MATERIALIZED VIEW urbandefinitions.cityoptions AS 
  WITH cities AS (
          {0}
         )
@@ -81,16 +81,16 @@ placeoptions = """CREATE MATERIALIZED VIEW urbanclusters.cityoptions AS
     cities.placeid,
     (cities.placename::text || ', '::text) || tlstates.name::text AS label
    FROM cities
-     LEFT JOIN urbanclusters.tigerlineplaces tlplaces ON cities.placeid = tlplaces.ogc_fid
-     LEFT JOIN urbanclusters.tigerlinestates tlstates ON tlplaces.statefp::text = tlstates.statefp::text
+     LEFT JOIN population.tigerlineplaces tlplaces ON cities.placeid = tlplaces.geoid
+     LEFT JOIN population.tigerlinestates tlstates ON tlplaces.statefp::text = tlstates.statefp::text
 WITH DATA;
 
-ALTER TABLE urbanclusters.cityoptions
+ALTER TABLE urbandefinitions.cityoptions
   OWNER TO urbis;
 
 
 CREATE INDEX cityoptions_city_search_idx
-  ON urbanclusters.cityoptions
+  ON urbandefinitions.cityoptions
   USING btree
   (label COLLATE pg_catalog."default");""".format(" UNION ALL ".join(uniontables))
 

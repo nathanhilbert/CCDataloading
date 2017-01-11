@@ -42,7 +42,7 @@ def multiprocessor(fullfilepath):
           -gt 1000 \
           -s_srs "{0}" -t_srs EPSG:3857 \
            -f "PostgreSQL" \
-          PG:"host=ontoserv port=5434 dbname=urbisdata01 user=urbis password=urbis" \
+          PG:"host=ontoserv port=5432 dbname=urbisdata01 user=urbis password=urbis" \
            -append "{1}" -nln buildings3d"""\
           .format(proj4str, fullfilepath)
 
